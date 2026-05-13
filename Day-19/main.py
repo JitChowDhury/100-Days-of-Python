@@ -1,34 +1,37 @@
 import random
-from turtle import  Turtle , Screen
-#
-# heli = Turtle()
-# screen = Screen()
-#
-# def move_forwards():
-#     heli.forward(10)
-#
-# def move_backwards():
-#     heli.backward(10);
-# def turn_left():
-#     new_heading=heli.heading()+10
-#     heli.setheading(new_heading)
-#
-# def turn_right():
-#     new_heading = heli.heading()-10
-#     heli.setheading(new_heading)
-#
-# def clear():
-#     heli.clear()
-#     heli.penup()
-#     heli.home()
-#     heli.pendown()
+from turtle import Turtle,Screen
+
+
+# pointer = Turtle()
+# screen=Screen()
+
+# angle=0
+
+# def forward():
+#     pointer.forward(10)
+# def backward():
+#     pointer.backward(10)
+# def counterClock():
+#     global angle
+#     angle+=5
+#     pointer.setheading(angle)
+# def clock():
+#     global angle
+#     angle-=5
+#     pointer.setheading(angle)
+
+
 # screen.listen()
-# screen.onkey(key= "w",fun=move_forwards)
-# screen.onkey(move_backwards,"s")
-# screen.onkey(turn_left,"a")
-# screen.onkey(turn_right,"d")
-# screen.onkey(clear,"c")
+# screen.onkey(forward,"w")
+# screen.onkey(backward,"s")
+# screen.onkey(counterClock,"a")
+# screen.onkey(clock,"d")
+# screen.onkey(screen.reset,"c")
+
+
 # screen.exitonclick()
+
+
 
 
 from turtle import  Turtle , Screen
