@@ -41,21 +41,38 @@
 # print(scoreData)
 # scoreData.to_csv("Day-25/score.csv")
 
+
+# print(pd.__version__)
+# data=[902,903,904,109,70]
+# room_series=pd.Series(data,index=["Room1","Room2","Room3","Room4","Room5"])
+# room_series.loc["Room1"]=9902
+# room_series.iloc[1]=2909
+# # print(room_series)
+
+
+# calories = { "Day 1":1750,"Day 2":2025,"Day 3":1500}
+# calorie_series=pd.Series(calories)
+# print(calorie_series)
+
+# # print(calorie_series[calorie_series<2000])
+
+# data={
+#   "Name":["SpongeBob","Patrick","Squidward"]
+# }
+
 import pandas as pd
-print(pd.__version__)
-data=[902,903,904,109,70]
-room_series=pd.Series(data,index=["Room1","Room2","Room3","Room4","Room5"])
-room_series.loc["Room1"]=9902
-room_series.iloc[1]=2909
-# print(room_series)
+data = pd.read_csv("Day-25/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+greySqu=len((data[data["Primary Fur Color"]=="Gray"]))
+redSqu=len((data[data["Primary Fur Color"]=="Cinnamon"]))
+blackSqu=len((data[data["Primary Fur Color"]=="Black"]))
 
+data_dict={
+  "Fur Color" : ["Gray","Cinnamon","Black"],
+  "Count" :[greySqu,redSqu,blackSqu]
 
-calories = { "Day 1":1750,"Day 2":2025,"Day 3":1500}
-calorie_series=pd.Series(calories)
-print(calorie_series)
-
-# print(calorie_series[calorie_series<2000])
-
-data={
-  "Name":["SpongeBob","Patrick","Squidward"]
 }
+
+pd_dataframe = pd.DataFrame(data_dict)
+print(pd_dataframe)
+pd_dataframe.to_csv("Day-25/SquCount.csv")
+
