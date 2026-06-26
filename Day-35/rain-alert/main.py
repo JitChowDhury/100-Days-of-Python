@@ -1,7 +1,9 @@
 import requests
 import json
 import smtplib
-api_key="2ed1b33a74dc13d90ac75b4371a56538"
+import os
+
+api_key=os.environ.get("WEATHER_API_KEY")
 
 MY_EMAIL="jitchowdhury8717@gmail.com"
 connection=smtplib.SMTP("smtp.gmail.com")
